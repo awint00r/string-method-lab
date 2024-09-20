@@ -10,6 +10,18 @@ function getCharAt(string, index) {
     }
 }
 
+function concatenateStrings(string1, string2) {
+    if (typeof string1 !== string) {
+        return ('Value given to function was of Data Type: ' + (typeof string1));
+    }
+    if (typeof string2 !== string) {
+        return ('Value given to function was of Data Type: ' + (typeof string2));
+    }
+    else {
+        return string1 + string2;
+    }  
+    }
+
 
 
 
