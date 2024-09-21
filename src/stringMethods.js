@@ -76,6 +76,18 @@ function concatenateStrings(string1, string2) {
         } 
     }
 
+    function convertToLowerCase(string) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.toLowerCase(string);
+        }  
+    }
+
 module.exports = {
     getCharAt,
     concatenateStrings,
@@ -83,7 +95,7 @@ module.exports = {
     getIndexOf,
     sliceString,
     splitString,
-    // convertToLowerCase,
+    convertToLowerCase,
     // convertToUpperCase,
     // trimString,
     // replaceSubstring
