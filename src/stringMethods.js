@@ -100,6 +100,15 @@ function concatenateStrings(string1, string2) {
         }  
     } 
 
+    function trimString(string) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string)); 
+        }
+        else {
+            return string.trim(string)
+        }
+    }
+
 module.exports = {
     getCharAt,
     concatenateStrings,
@@ -109,6 +118,6 @@ module.exports = {
     splitString,
     convertToLowerCase,
     convertToUpperCase,
-    // trimString,
+    trimString,
     // replaceSubstring
 };
