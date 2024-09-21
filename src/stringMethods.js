@@ -88,6 +88,18 @@ function concatenateStrings(string1, string2) {
         }  
     }
 
+    function convertToUpperCase(string) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.toUpperCase(string);
+        }  
+    } 
+
 module.exports = {
     getCharAt,
     concatenateStrings,
@@ -96,7 +108,7 @@ module.exports = {
     sliceString,
     splitString,
     convertToLowerCase,
-    // convertToUpperCase,
+    convertToUpperCase,
     // trimString,
     // replaceSubstring
 };
