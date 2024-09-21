@@ -52,12 +52,24 @@ function concatenateStrings(string1, string2) {
         }
     }
 
+    function sliceString(string) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.slice(0,5);
+        }
+    }
+
 module.exports = {
     getCharAt,
     concatenateStrings,
     doesInclude,
     getIndexOf,
-    // sliceString,
+    sliceString,
     // splitString,
     // convertToLowerCase,
     // convertToUpperCase,
