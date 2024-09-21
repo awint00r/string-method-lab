@@ -109,6 +109,21 @@ function concatenateStrings(string1, string2) {
         }
     }
 
+    function replaceSubstring(string, world, everyone) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (typeof world !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof world));
+        }
+        if (string === '') {
+            return ('String is empty')
+        } 
+        else {
+            return string.replace(world, everyone)
+        }
+    }
+
 module.exports = {
     getCharAt,
     concatenateStrings,
@@ -119,5 +134,5 @@ module.exports = {
     convertToLowerCase,
     convertToUpperCase,
     trimString,
-    // replaceSubstring
+    replaceSubstring
 };
