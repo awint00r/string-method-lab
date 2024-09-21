@@ -37,13 +37,26 @@ function concatenateStrings(string1, string2) {
         }
     }
 
-
+    function getIndexOf(string, world) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (typeof world !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof world));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.indexOf(world);
+        }
+    }
 
 module.exports = {
     getCharAt,
     concatenateStrings,
     doesInclude,
-    // getIndexOf,
+    getIndexOf,
     // sliceString,
     // splitString,
     // convertToLowerCase,
