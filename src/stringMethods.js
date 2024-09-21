@@ -64,13 +64,25 @@ function concatenateStrings(string1, string2) {
         }
     }
 
+    function splitString(string) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.split(' ');
+        } 
+    }
+
 module.exports = {
     getCharAt,
     concatenateStrings,
     doesInclude,
     getIndexOf,
     sliceString,
-    // splitString,
+    splitString,
     // convertToLowerCase,
     // convertToUpperCase,
     // trimString,
