@@ -1,6 +1,6 @@
 function getCharAt(string, index) {
-    if (typeof string !== string) {
-        return ('Value given to function was of Data Type:' + (typeof string));
+    if (typeof string !== "string") {
+        return ('Value given to function was of Data Type: ' + (typeof string));
     }
     if (string.length === 0) {
         return ('String is empty');
@@ -11,10 +11,10 @@ function getCharAt(string, index) {
 }
 
 function concatenateStrings(string1, string2) {
-    if (typeof string1 !== string) {
+    if (typeof string1 !== "string") {
         return ('Value given to function was of Data Type: ' + (typeof string1));
     }
-    if (typeof string2 !== string) {
+    if (typeof string2 !== "string") {
         return ('Value given to function was of Data Type: ' + (typeof string2));
     }
     else {
@@ -22,6 +22,20 @@ function concatenateStrings(string1, string2) {
     }  
     }
 
+    function doesInclude(string, world) {
+        if (typeof string !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof string));
+        }
+        if (typeof world !== "string") {
+            return ('Value given to function was of Data Type: ' + (typeof world));
+        }
+        if (string === '') {
+            return ('String is empty')
+        }
+        else {
+            return string.includes(world);
+        }
+    }
 
 
 
@@ -29,11 +43,11 @@ module.exports = {
     getCharAt,
     concatenateStrings,
     doesInclude,
-    getIndexOf,
-    sliceString,
-    splitString,
-    convertToLowerCase,
-    convertToUpperCase,
-    trimString,
-    replaceSubstring
+    // getIndexOf,
+    // sliceString,
+    // splitString,
+    // convertToLowerCase,
+    // convertToUpperCase,
+    // trimString,
+    // replaceSubstring
 };
